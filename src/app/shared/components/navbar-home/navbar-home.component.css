@@ -1,0 +1,70 @@
+/* Reset de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #3E1FB2;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #C5F237;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 40px; /* Tamaño ajustado para un logo pequeño */
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.navbar-links .nav-link {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #3E1FB2;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #C5F237;
+  color: black;
+}
+
+.navbar .btn-primary:hover {
+  background-color: #2a1480;
+}
+
+.navbar .btn-secondary:hover {
+  background-color: #a3d32e;
+}
