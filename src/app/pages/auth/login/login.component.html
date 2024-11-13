@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="login-container">
+  <mat-card class="login-card">
+    <div class="logo">
+      <mat-icon class="logo-icon">account_circle</mat-icon>
+    </div>
+    <h2>Please sign in</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email address</mat-label>
+        <input matInput formControlName="email" type="email" placeholder="Email address" />
+        <mat-error *ngIf="loginForm.get('email')?.invalid">Invalid email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" placeholder="Password" />
+        <mat-error *ngIf="loginForm.get('password')?.invalid">Invalid password</mat-error>
+      </mat-form-field>
+
+      <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+
+      <button mat-raised-button color="primary" class="submit-button" type="submit">
+        Sign in
+      </button>
+    </form>
+    <footer>&copy; 2017–2024</footer>
+  </mat-card>
+</div>
