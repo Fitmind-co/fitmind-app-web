@@ -1,0 +1,36 @@
+.footer {
+  background-color: #343a40; /* Fondo oscuro acorde con el navbar */
+  color: #f8f9fa; /* Texto claro */
+  padding: 1rem 0;
+  position: fixed; /* Fijo al final de la pantalla */
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.footer a {
+  color: #f8f9fa; /* Enlaces claros */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease; /* Transición suave en color */
+}
+
+.footer a:hover {
+  color: #9feccc; /* Color dorado al hacer hover */
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 0;
+  color: #adb5bd; /* Texto gris claro */
+}
+
+.footer i {
+  font-size: 1.5rem; /* Iconos más grandes */
+  color: #f8f9fa;
+  transition: color 0.3s ease; /* Transición suave en color */
+}
+
+.footer i:hover {
+  color: #ff0000; /* Iconos en color dorado al hacer hover */
+}
