@@ -1,0 +1,20 @@
+<div class="daily-progress">
+  <h3>Progreso Diario</h3>
+  <div style="position: relative; width: 200px; height: 200px; margin: auto;">
+    <canvas baseChart
+            [data]="chartData"
+            [labels]="chartLabels"
+            [chartType]="chartType"
+            [options]="chartOptions">
+    </canvas>
+    <div class="progress-text">
+      <p class="percentage">{{ progress }}%</p>
+      <p>Progreso Diario</p>
+    </div>
+  </div>
+  <ul class="progress-legend">
+    <li><span class="dot" style="background-color: #4CAF50;"></span> Manejar el estrés</li>
+    <li><span class="dot" style="background-color: #FFC107;"></span> Perder peso</li>
+    <li><span class="dot" style="background-color: #FFEB3B;"></span> Dormir temprano</li>
+  </ul>
+</div>
