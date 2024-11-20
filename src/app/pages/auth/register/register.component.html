@@ -1,1 +1,31 @@
-<p>register works!</p>
+<div class="register-container">
+  <mat-card class="register-card">
+    <div class="logo">
+      <mat-icon class="logo-icon">account_circle</mat-icon>
+    </div>
+    <h2 class="register-header">Please register</h2>
+    <form class="register-form">
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter your name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>Email address</mat-label>
+        <input matInput type="email" placeholder="Enter your email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Enter your password" />
+      </mat-form-field>
+
+      <mat-checkbox>I agree to the terms and conditions</mat-checkbox>
+
+      <button mat-raised-button color="primary" type="button" class="submit-button" (click)="onRegister()">
+        Register
+      </button>
+    </form>
+    <footer class="footer">© 2017–2024</footer>
+  </mat-card>
+</div>
