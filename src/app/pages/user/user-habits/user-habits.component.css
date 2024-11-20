@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .habits {
+    margin-top: 20px;
+  }
+  
+  .habit {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .profile {
+    width: 20%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .profile img {
+    width: 100px;
+    border-radius: 50%;
+  }
+  
+  /* Estilo para días completados */
+.completed {
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+  }
+  
+  /* Estilo para días perdidos */
+  .missed {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+  }

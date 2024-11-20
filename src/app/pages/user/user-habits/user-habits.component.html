@@ -1,3 +1,78 @@
+<!-- user-habits.component.html -->
 <p>
   user-habits works!
 </p>
+
+<div class="container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">FIT MIND</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Metas</a></li>
+        <li><a href="#" class="active">Hábitos</a></li>
+        <li><a href="#">Progreso</a></li>
+        <li><a href="#">Ejercicio</a></li>
+        <li><a href="#">Alimentación</a></li>
+        <li><a href="#">Recursos</a></li>
+        <li><a href="#">Comunidad</a></li>
+      </ul>
+    </nav>
+    <div class="upgrade">
+      <p>Mejora tu PLAN</p>
+      <button>PREMIUM</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <header>
+      <h1>¡Buenos días, {{ user.name }}!</h1>
+      <p>Lunes 04 Noviembre, 2024</p>
+    </header>
+
+    <section class="habits">
+      <h2>Lista de Hábitos</h2>
+      <div class="habit" *ngFor="let habit of habits">
+        <div class="habit-info">
+          <h3>{{ habit.title }}</h3>
+          <p><strong>Duración:</strong> {{ habit.duration }}</p>
+          <p><strong>Frecuencia:</strong> {{ habit.frequency }}</p>
+          <p><strong>Hora:</strong> {{ habit.time }}</p>
+          <p><strong>Inicio:</strong> {{ habit.startDate }}</p>
+          <p class="description">{{ habit.description }}</p>
+        </div>
+        <div class="streak">
+          <p><strong>Racha más larga:</strong> {{ habit.streak }} días</p>
+          <div class="progress">
+            <span
+              *ngFor="let day of habit.progress"
+              class="day"
+              [ngClass]="{
+                'completed': day === 'completed',
+                'missed': day === 'missed'
+              }">
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Profile Section -->
+  <section class="profile">
+    <div class="profile-info">
+      <img [src]="user.profileImage" alt="{{ user.name }}">
+      <h3>{{ user.name }}</h3>
+      <p>{{ user.age }} Años</p>
+      <p>Altura: {{ user.height }}</p>
+      <p>Peso: {{ user.weight }}</p>
+      <p>Género: {{ user.gender }}</p>
+    </div>
+    <div class="calendar">
+      <h3>Noviembre 2024</h3>
+      <p>Hoy: 2</p>
+    </div>
+  </section>
+</div>
