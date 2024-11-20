@@ -18,14 +18,11 @@
       <mat-form-field appearance="fill" class="form-group">
         <mat-label>Password</mat-label>
         <input matInput type="password" placeholder="Enter your password" />
-        <button mat-icon-button matSuffix aria-label="Toggle password visibility">
-          <mat-icon>visibility</mat-icon>
-        </button>
       </mat-form-field>
 
       <mat-checkbox>I agree to the terms and conditions</mat-checkbox>
 
-      <button mat-raised-button color="primary" type="button" class="submit-button">
+      <button mat-raised-button color="primary" type="button" class="submit-button" (click)="onRegister()">
         Register
       </button>
     </form>

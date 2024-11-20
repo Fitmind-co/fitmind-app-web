@@ -1,23 +1,27 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // Importa el servicio Router
+import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon'; // Agrega esto para los iconos
-import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    MatCheckboxModule,
+    CommonModule,
+    MatCardModule,
+    MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule,
-    MatIconModule // Asegúrate de incluir MatIconModule aquí
+    MatIconModule,
+    MatCheckboxModule,
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
@@ -25,7 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private snackBar: MatSnackBar) {
+  constructor(private fb: FormBuilder, private router: Router) { // Inyecta el Router
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
@@ -35,12 +39,10 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      this.snackBar.open('Login successful', 'Close', { duration: 3000 });
+      // Lógica adicional si es necesaria
+      this.router.navigate(['/user/dashboard']); // Redirige al dashboard
     } else {
-      this.snackBar.open('Please fill in the form correctly', 'Close', { duration: 3000 });
+      alert('Please fill in the form correctly'); // Muestra un mensaje si hay errores
     }
   }
 }
-
-
-

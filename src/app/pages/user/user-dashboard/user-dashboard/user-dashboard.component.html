@@ -1,0 +1,86 @@
+<div class="dashboard">
+  <!-- Barra lateral -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Fit Mind Logo" />
+      <h2>FIT MIND</h2>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a routerLink="/user/dashboard" routerLinkActive="active">Inicio</a></li>
+        <li><a routerLink="/user/metas" routerLinkActive="active">Metas</a></li>
+        <li><a routerLink="/user/habitos" routerLinkActive="active">Hábitos</a></li>
+        <li><a routerLink="/user/progreso" routerLinkActive="active">Progreso</a></li>
+        <li><a routerLink="/user/ejercicios" routerLinkActive="active">Ejercicio</a></li>
+        <li><a routerLink="/user/alimentacion" routerLinkActive="active">Alimentación</a></li>
+        <li><a routerLink="/user/logros" routerLinkActive="active">Logros</a></li>
+        <li><a routerLink="/user/recursos" routerLinkActive="active">Recursos</a></li>
+        <li><a routerLink="/user/comunidad" routerLinkActive="active">Comunidad</a></li>
+      </ul>
+    </nav>
+    <div class="premium">
+      <button>Mejora tu PLAN</button>
+    </div>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <!-- Encabezado -->
+    <header class="header">
+      <div class="greeting">
+        <h1>¡Buenos días, Sofía!</h1>
+        <p>Lunes 04 Noviembre, 2024</p>
+      </div>
+    </header>
+
+    <!-- Widgets -->
+    <section class="widgets">
+      <div class="widget progress">
+        <h2>Progreso</h2>
+        <ul>
+          <li>✅ Manejar el estrés</li>
+          <li>✅ Perder peso</li>
+          <li>✅ Dormir temprano</li>
+        </ul>
+      </div>
+
+      <div class="widget reminders">
+        <h2>Recordatorios</h2>
+        <ul>
+          <li>Ejercicios para el estrés: 10:00 AM - 11:00 AM</li>
+          <li>Fisioterapia: 04:00 PM - 05:00 PM</li>
+        </ul>
+      </div>
+
+      <div class="widget habits">
+        <h2>Hábitos</h2>
+        <ul>
+          <li>✔️ Despertarse temprano</li>
+          <li>✔️ Ir al gimnasio</li>
+          <li>✔️ Dormirse temprano</li>
+        </ul>
+      </div>
+
+      <div class="widget activity">
+        <h2>Actividad</h2>
+        <canvas id="activityChart"></canvas>
+      </div>
+
+      <div class="widget goals">
+        <h2>Metas</h2>
+        <div class="goal">
+          <p>Dormir temprano</p>
+          <progress value="170" max="300"></progress>
+        </div>
+        <div class="goal">
+          <p>Manejar el estrés</p>
+          <progress value="50" max="60"></progress>
+        </div>
+        <div class="goal">
+          <p>Perder peso</p>
+          <progress value="1" max="5"></progress>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
