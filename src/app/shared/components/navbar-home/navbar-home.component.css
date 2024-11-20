@@ -1,0 +1,61 @@
+/* Fondo y color del navbar */
+.custom-navbar {
+  background-color: #482BE7; /* Fondo púrpura */
+}
+
+.navbar-brand {
+  color: #a8ff00; /* Verde neón */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-icon {
+  width: 40px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-right: 8px;
+}
+
+/* Estilo de los enlaces de navegación */
+.nav-link {
+  font-size: 1.1rem;
+  color: #f8f9fa;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #A8D74E; /* Verde neón en hover */
+}
+
+/* Botón de Iniciar Sesión */
+.custom-btn-outline {
+  border-color: #A8D74E;
+  color: #A8D74E;
+  background-color: transparent;
+}
+
+.custom-btn-outline:hover {
+  background-color: #A8D74E;
+  color: #482BE7;
+  border-color: #A8D74E;
+}
+
+/* Botón de Registrarse */
+.custom-btn-primary {
+  background-color: #A8D74E;
+  color: #482BE7;
+  border: none;
+}
+
+.custom-btn-primary:hover {
+  background-color: #A8D74E; /* Verde claro al hacer hover */
+  color: #482BE7;
+}
+
+/* Toggler para dispositivos móviles */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  color: white;
+}

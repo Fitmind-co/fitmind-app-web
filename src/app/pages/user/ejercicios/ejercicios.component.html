@@ -1,0 +1,62 @@
+<div class="ejercicios">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">FIT MIND</div>
+    <nav>
+      <ul>
+        <li>Inicio</li>
+        <li>Metas</li>
+        <li>Hábitos</li>
+        <li>Progreso</li>
+        <li class="active">Ejercicio</li>
+        <li>Alimentación</li>
+        <li>Logros</li>
+        <li>Recursos</li>
+        <li>Comunidad</li>
+      </ul>
+    </nav>
+    <button class="premium">Mejora tu PLAN <span>PREMIUM</span></button>
+  </aside>
+
+  <!-- Content -->
+  <main class="content">
+    <header>
+      <h1>¡Buenos días, Sofía!</h1>
+      <p>Lunes 04 Noviembre, 2024</p>
+    </header>
+    <section class="objective">
+      <h2>Sofía tu objetivo actual: Tonificación y Resistencia</h2>
+    </section>
+    <section class="exercise">
+      <h3>Rutina de Ejercicios Lunes</h3>
+      <div *ngFor="let exercise of exercises" class="exercise-card">
+        <h4>{{ exercise.title }}</h4>
+        <p><strong>Series:</strong> {{ exercise.series }}</p>
+        <p><strong>Descanso:</strong> {{ exercise.rest }}</p>
+        <p>{{ exercise.instructions }}</p>
+        <img [src]="exercise.image" [alt]="exercise.title">
+        <!-- Botón con ngClass -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Profile Summary -->
+  <aside class="profile-summary">
+    <div class="user-info">
+      <img src="sofia.jpg" alt="Sofía">
+      <h3>{{ user.name }}</h3>
+      <p>{{ user.age }} Años</p>
+      <ul>
+        <li>Altura: {{ user.height }}</li>
+        <li>Peso: {{ user.weight }}</li>
+        <li>Género: {{ user.gender }}</li>
+      </ul>
+    </div>
+    <div class="calendar">
+      <h4>Noviembre 2024</h4>
+      <table>
+        <!-- Aquí va la tabla del calendario -->
+      </table>
+    </div>
+  </aside>
+</div>
